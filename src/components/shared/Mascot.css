@@ -1,0 +1,59 @@
+/* src/components/shared/Mascot.css */
+.mascot-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 600px;
+}
+
+.mascot-circle {
+  background: radial-gradient(circle, #ffd54f 0%, #ff9f43 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  flex-shrink: 0;
+}
+
+.mascot-sm .mascot-circle {
+  width: 42px;
+  height: 42px;
+  font-size: 1.4rem;
+}
+
+.mascot-md .mascot-circle {
+  width: 52px;
+  height: 52px;
+  font-size: 1.8rem;
+}
+
+.mascot-lg .mascot-circle {
+  width: 64px;
+  height: 64px;
+  font-size: 2.2rem;
+}
+
+.mascot-bubble {
+  background: rgba(255, 255, 255, 0.95);
+  color: #1e1b4b;
+  padding: 8px 16px;
+  border-radius: 18px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.mascot-bubble::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 6px 8px 6px 0;
+  border-style: solid;
+  border-color: transparent rgba(255, 255, 255, 0.95) transparent transparent;
+}

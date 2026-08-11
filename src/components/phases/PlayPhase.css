@@ -1,0 +1,214 @@
+/* src/components/phases/PlayPhase.css */
+.play-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 12px 16px 24px;
+  width: 100%;
+  max-width: 820px;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+.play-topic-badge {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 660px;
+  background: rgba(26, 20, 68, 0.85);
+  border: 1px solid rgba(130, 110, 210, 0.3);
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: #fff;
+  gap: 8px;
+}
+
+.topic-boss-btn {
+  background: rgba(255, 179, 0, 0.2);
+  border: 1px solid var(--gold);
+  color: var(--gold-light);
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 12px;
+  transition: var(--transition-fast);
+  cursor: pointer;
+}
+.topic-boss-btn:hover {
+  background: var(--gold);
+  color: #18181b;
+}
+
+.topic-map-btn {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 12px;
+  transition: var(--transition-fast);
+  cursor: pointer;
+}
+.topic-map-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.play-hud-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hud-pill {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.85rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.play-progress-container {
+  width: 100%;
+  max-width: 660px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.play-progress-labels {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.play-progress-bar-track {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.play-progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #f59e0b, #ffd54f);
+  border-radius: 10px;
+  transition: width 0.25s ease;
+}
+
+.play-question-area {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.play-question-nav {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  max-width: 660px;
+  justify-content: space-between;
+}
+
+/* Map Screen */
+.play-map-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  width: 100%;
+}
+
+.play-map-card {
+  max-width: 820px;
+  width: 100%;
+  padding: 24px;
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+}
+
+.play-map-title {
+  color: var(--gold);
+  margin: 0;
+  text-align: center;
+}
+
+/* Play Done Screen */
+.play-done-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  width: 100%;
+}
+
+.play-done-card {
+  max-width: 540px;
+  width: 100%;
+  padding: 32px 24px;
+  border-radius: var(--radius-xl);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.play-done-icon {
+  font-size: 3.5rem;
+}
+
+.play-done-title {
+  color: var(--gold-light);
+  margin: 0;
+}
+
+.play-done-stats {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.stat-pill {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 8px 16px;
+  border-radius: 14px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.play-done-cta {
+  font-size: 1.15rem;
+  padding: 14px 40px;
+  border-radius: 20px;
+  margin-top: 8px;
+}

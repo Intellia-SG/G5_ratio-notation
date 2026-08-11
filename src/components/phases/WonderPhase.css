@@ -1,0 +1,164 @@
+/* src/components/phases/WonderPhase.css */
+.wonder-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 16px max(50px, calc(30px + env(safe-area-inset-bottom, 24px)));
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+.wonder-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.wonder-particle {
+  position: absolute;
+  user-select: none;
+  animation: wonderFloat 5s ease-in-out infinite alternate;
+}
+
+@keyframes wonderFloat {
+  0%   { transform: translateY(0px) rotate(0deg); opacity: 0.25; }
+  100% { transform: translateY(-30px) rotate(15deg); opacity: 0.65; }
+}
+
+.wonder-content {
+  width: 100%;
+  max-width: 720px;
+  z-index: 2;
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wonder-card {
+  padding: clamp(20px, 3vw, 36px);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+}
+
+.wonder-stadium-icon {
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  line-height: 1;
+}
+
+.wonder-title {
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.wonder-number-display {
+  background: rgba(255, 179, 0, 0.12);
+  border: 1.5px solid rgba(255, 179, 0, 0.35);
+  border-radius: var(--radius-lg);
+  padding: 10px 24px;
+  box-shadow: 0 4px 20px rgba(255, 179, 0, 0.15);
+}
+
+.wonder-num {
+  color: var(--gold);
+  letter-spacing: 2px;
+  font-size: clamp(1.8rem, 3.5vw + 0.3rem, 3.2rem);
+  font-weight: 800;
+}
+
+.wonder-question-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-md);
+  padding: 14px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 620px;
+  width: 100%;
+}
+
+.wonder-q {
+  font-size: clamp(1.05rem, 1.35vw + 0.2rem, 1.3rem);
+  line-height: 1.5;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.wonder-em {
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.wonder-highlight {
+  color: var(--gold-light);
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+.wonder-mascot-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 2px 0;
+}
+
+.wonder-cta {
+  font-size: clamp(1.05rem, 1.2vw + 0.2rem, 1.25rem);
+  padding: 14px 44px;
+  border-radius: var(--radius-pill);
+  margin-top: 4px;
+  box-shadow: 0 6px 20px rgba(245, 158, 11, 0.45);
+  cursor: pointer;
+}
+
+/* ─── Mobile Responsiveness Enhancements ─────────────────────────────────── */
+@media (max-width: 600px) {
+  .wonder-wrap {
+    padding: 6px 10px max(56px, calc(36px + env(safe-area-inset-bottom, 24px)));
+  }
+  .wonder-content {
+    margin: 4px 0 auto 0;
+  }
+  .wonder-card {
+    padding: 16px 12px;
+    gap: 10px;
+    border-radius: 20px;
+  }
+  .wonder-stadium-icon {
+    font-size: 2.2rem;
+  }
+  .wonder-number-display {
+    padding: 8px 16px;
+  }
+  .wonder-num {
+    font-size: 1.6rem;
+  }
+  .wonder-question-card {
+    padding: 10px 12px;
+    gap: 6px;
+  }
+  .wonder-q {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  .wonder-cta {
+    padding: 12px 24px;
+    font-size: 1.05rem;
+    width: 100%;
+    max-width: 280px;
+    min-height: 46px;
+  }
+}

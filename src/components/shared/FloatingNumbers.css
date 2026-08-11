@@ -1,0 +1,29 @@
+/* src/components/shared/FloatingNumbers.css */
+.floating-symbols-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.floating-symbol {
+  position: absolute;
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--purple-light);
+  user-select: none;
+  animation: floatDrift linear infinite alternate;
+}
+
+@keyframes floatDrift {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-24px) rotate(8deg);
+  }
+  100% {
+    transform: translateY(12px) rotate(-8deg);
+  }
+}
